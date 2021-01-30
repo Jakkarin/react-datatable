@@ -85,7 +85,7 @@ export default function TableHeader(props){
               {(props.config.button.extra==true) ? (
                 props.extraButtons.map((elem,index)=>{
                     if (React.isValidElement(elem)) {
-                      return elem;
+                      return  <div key={index}>{elem}</div>;
                     }
 
                     elem.clickCount=0;
