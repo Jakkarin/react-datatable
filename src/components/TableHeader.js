@@ -84,7 +84,7 @@ export default function TableHeader(props){
               ) : null}
               {(props.config.button.extra==true) ? (
                 props.extraButtons.map((elem,index)=>{
-                    if (typeof elem === 'function') {
+                    if (React.isValidElement(elem)) {
                       return elem;
                     }
 
